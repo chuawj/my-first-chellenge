@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>코드 업로드</title>
+</head>
+<body>
+    <header>
+        <h1>코드 업로드</h1>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">업로드</button>
+        </form>
+        <a href="/">돌아가기</a>
+    </main>
+</body>
+</html>
