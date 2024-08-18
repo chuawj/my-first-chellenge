@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ code.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ code.title }}</h1>
+    </header>
+    <main>
+        <p>언어: {{ code.language }}</p>
+        <p>가격: {{ code.price }}원</p>
+        <pre>{{ code.code_snippet }}</pre>
+        <p>설명: {{ code.description }}</p>
+        <p>업로드한 사용자: {{ code.uploaded_by }}</p>
+        <a href="/">돌아가기</a>
+    </main>
+</body>
+</html>
