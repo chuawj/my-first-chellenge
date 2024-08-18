@@ -1,0 +1,27 @@
+<!-- C:\Users\hanmy\Website\code_portfolio\code_share\templates\index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>코드 포트폴리오</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>코드 목록</h1>
+        <nav>
+            <a href="{% url 'upload_code' %}">코드 업로드</a>
+        </nav>
+    </header>
+    <main>
+        <ul>
+            {% for code in codes %}
+                <li>
+                    <a href="{% url 'code_detail' code.id %}">{{ code.title }}</a> - {{ code.language }} - {{ code.price }}원
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
